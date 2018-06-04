@@ -1,0 +1,11 @@
+﻿@using NewRecipeTester.Models;
+
+@model Document
+
+@{
+    ViewData["Title"] = "Recipe Creatror";
+}
+
+<br>
+@Html.TextAreaFor(model => model.CompletedText, 10, 40, null)
+<br>  

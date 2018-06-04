@@ -1,0 +1,36 @@
+﻿@using NewRecipeTester.Models;
+
+@model Document
+
+@{
+    ViewData["Title"] = "Recipe Creatror";
+}
+
+@using (Html.BeginForm("CreateDocument", "Home", FormMethod.Post))
+{
+    <div style="width: 100%; padding: 10px;">
+        <p> Recipe Title</p>
+        <input name="Title" type="text" value="" /> <br />
+
+        <p> SEO Keyword 1</p>
+        <input name="keyword1" type="text" value="" /> <br />
+        <p> SEO Keyword 2</p>
+        <input name="keyword2" type="text" value="" /> <br />
+        <p> SEO Keyword 3</p>
+        <input name="keyword3" type="text" value="" /> <br />
+        <p> Season</p>
+        <input name="season" type="text" value="" /> <br />
+        <p> Texture</p>
+        <input name="texture" type="text" value="" /> <br />
+        <p>Advantage 1</p>
+        <input name="advantage1" type="text" value="" /> <br />
+        <p>Advantage 2</p>
+        <input name="advantage2" type="text" value="" /> <br />
+        <p>Question 1</p>
+        <input name="question1" type="text" value="" /> <br />
+        <p>Question 2</p>
+        <input name="question2" type="text" value="" /> <br />
+
+        <input type="submit" value="Create" id="Submit" class="btn btn-default" onclick="location.href='@Url.Action("Home", "CreateDocument")'" />
+    </div>
+}
